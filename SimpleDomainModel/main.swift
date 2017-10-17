@@ -8,7 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
+//print("Hello, World!")
 
 public func testMe() -> String {
   return "I have been tested"
@@ -148,6 +148,8 @@ open class Person {
     set(value) {
         if(age >= 16){
             self._job = value
+        }else{
+            self._job = nil
         }
     }
   }
@@ -158,6 +160,8 @@ open class Person {
     set(value) {
         if(self.age >= 18){
             self._spouse = value
+        }else{
+            self._spouse = nil
         }
     }
   }
@@ -169,7 +173,7 @@ open class Person {
   }
   //print a person's infomation
   open func toString() -> String {
-    return "[Person: firstName: \(firstName) lastName: \(lastName) age: \(age) job: \(job!) spouse: \(spouse!)]"
+    return "[Person: firstName:\(firstName) lastName:\(lastName) age:\(age) job:\(job) spouse:\(spouse)]"
   }
 }
 
